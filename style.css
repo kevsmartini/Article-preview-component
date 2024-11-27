@@ -1,0 +1,277 @@
+/*CSS Reset*/
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: "Manrope", sans-serif;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*Colors*/
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: #9eafc2;
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  max-width: 900px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.404);
+}
+
+.image {
+  flex: 1.4;
+}
+
+.image img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.article-container {
+  flex: 2;
+  display: flex;
+}
+
+.description {
+  color: var(--Very-Dark-Grayish-Blue);
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-size: clamp(1.25rem, 0.9rem + 0.5vw, 1.5rem);
+}
+.text,
+.date {
+  color: var(--Grayish-Blue);
+  font-size: 1rem;
+}
+
+.name {
+  color: var(--Very-Dark-Grayish-Blue);
+  font-weight: 600;
+}
+
+.article-container article {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-direction: column;
+  padding: 0 30px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.social-media {
+  /* margin-left: auto;
+  background-color: var(--Light-Grayish-Blue);
+  padding: 10px;
+  border-radius: 50%; */
+  position: relative;
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  background-color: var(--Light-Grayish-Blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+
+}
+
+.share-icon {
+  width: 20px;
+  height: 18px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.share-icon-white {
+  height: 20px;
+  width: 20px;
+  display: none;
+}
+.share-icon-white:hover {
+  cursor: pointer;
+}
+
+.media-links {
+  width: 260px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--Very-Dark-Grayish-Blue);
+}
+
+.media-icons {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: -90px;
+  right: -110px;
+  z-index: 100;
+}
+
+.media-icons img {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.media-icons p {
+  color: var(--Light-Grayish-Blue);
+  letter-spacing: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid var(--Very-Dark-Grayish-Blue);
+  transform: rotate(180deg);
+}
+
+.mobile-icons-section {
+  display: none;
+  width: 100%;
+  padding: 25px;
+  background-color: var(--Very-Dark-Grayish-Blue);
+}
+
+.mobile-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+}
+
+.mobile-icons img {
+  height: 25px;
+  width: 25px;
+}
+
+.mobile-icons p {
+  color: var(--Light-Grayish-Blue);
+  letter-spacing: 0.6rem;
+  font-size: 1rem;
+}
+
+.mobile-share-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--Grayish-Blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.mobile-share-icon img {
+  width: 20px;
+  height: 18px;
+}
+
+@media (width < 1200px) {
+ 
+  .container {
+    padding: 20px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+    width: 500px;
+  }
+
+  .article-container article {
+    padding: 20px;
+  }
+
+  
+}
