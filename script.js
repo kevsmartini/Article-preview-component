@@ -25,7 +25,7 @@ shareIconWhite.addEventListener("click", () => {
     mediaIcons.style.display = "none";
     shareIconWhite.style.display = "none";
     shareIconBlack.style.display = "block";
-    socialMedia.style.backgroundColor = "var(--Light-Grayish-Blue)";
+    socialMedia.style.backgroundColor = "rgb(214, 219, 224)";
   }
 });
 
